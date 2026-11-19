@@ -53,7 +53,7 @@ void SPI_Init(SPI_Mode mode, SPI_DataOrder order)
             break;
     }
 
-    /* SPI clock = F_CPU / 16 */
+    /* SPI clock = F_CPU / 128 (125 kHz at 16 MHz) */
     SPCR |= (1 << SPR1) | (1 << SPR0);
 }
 
